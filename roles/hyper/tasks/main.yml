@@ -1,0 +1,13 @@
+---
+- name: Get bootstrap for Hypervisor
+  include_role:
+    name: common
+    tasks_from: scp
+
+- name: Install bootstrap for Hypervisor
+  raw: "tar -zxpf /opt/hyper_bootstrap/{{ bootstrap_tar }} -C /"
+
+- name: Install Python27 for Hypervisor
+  include_role:
+    name: common
+    tasks_from: pkg_add

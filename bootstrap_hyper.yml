@@ -1,0 +1,6 @@
+---
+- hosts: hypervisor
+  name: Bootstrap the hypervisor with Python27
+  gather_facts: false
+  roles:
+    - hyper

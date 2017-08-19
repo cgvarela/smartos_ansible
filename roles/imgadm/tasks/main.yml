@@ -1,0 +1,10 @@
+---
+- name: Get image for Hypervisor from localhost
+  copy:
+    src: "{{ item }}"
+    dest: /opt/
+  with_items: "{{ image_paths }}"
+
+- name: Install the image
+  with_items: "{{ image_uuids }}"
+  shell: "imgadm install -f /opt/{{ item }}/file -m /opt/{{ item }}/manifest.json"

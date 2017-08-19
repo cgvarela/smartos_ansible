@@ -1,0 +1,29 @@
+---
+- name: Create zone
+  vmadm:
+    brand: "{{ brand }}"
+    state: present
+    delegate_dataset: "{{ delegate_dataset }}"
+    alias: "{{ alias }}"
+    autoboot: "{{ autoboot }}"
+    cpu_cap: "{{ cpu_cap }}"
+    image_uuid: "{{ image_uuid }}"
+    quota: "{{ quota }}"
+    max_physical_memory: "{{ max_physical_memory }}"
+    resolvers:
+      - 114.114.114.114
+      - 8.8.8.8
+    nics:
+      - nic_tag: "{{ nic_tag }}"
+        ip: "{{ ip }}"
+        netmask: "{{ netmask }}"
+        gateway: "{{ gateway }}"
+        primary: true
+    customer_metadata:
+      root_authorized_keys: "{{ root_authorized_keys }}"
+      user-script: "{{ user_script }}"
+  register: create_result
+
+- name: Output the debug info
+  debug:
+    var: create_result

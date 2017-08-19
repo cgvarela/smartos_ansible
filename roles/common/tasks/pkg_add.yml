@@ -1,0 +1,12 @@
+---
+- name: Install libffi (pkg_add)
+  raw: "{{ pkg_add }} /opt/bootstrap/{{ libffi_tgz }}"
+  ignore_errors: yes
+
+- name: Install db4 (pkg_add)
+  raw: "{{ pkg_add }} /opt/bootstrap/{{ db4_tgz }}"
+  ignore_errors: yes
+
+- name: Install python27 (pkg_add)
+  raw: "{{ pkg_add }} /opt/bootstrap/{{ python_tgz }}"
+  ignore_errors: yes

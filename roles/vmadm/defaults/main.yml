@@ -1,0 +1,9 @@
+---
+nic_tag: admin
+brand: joyent
+delegate_dataset: true
+max_physical_memory: 4096
+cpu_cap: 400
+quota: 500
+autoboot: true
+user_script: "/usr/sbin/mdata-get root_authorized_keys > ~root/.ssh/authorized_keys ; /usr/sbin/mdata-get root_authorized_keys > ~admin/.ssh/authorized_keys"

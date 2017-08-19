@@ -1,0 +1,10 @@
+---
+- name: Copy the packages to the zone
+  include_role:
+    name: common
+    tasks_from: scp
+
+- name: Install the packages with pkg_add
+  include_role:
+    name: common
+    tasks_from: pkg_add

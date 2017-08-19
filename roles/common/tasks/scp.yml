@@ -1,0 +1,3 @@
+---
+- name: Get bootstrap from localhost
+  local_action: command scp -o StrictHostKeyChecking=no -r {{ bootstrap }} {{ ansible_user }}@{{ inventory_hostname }}:/opt/bootstrap

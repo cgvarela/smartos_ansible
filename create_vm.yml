@@ -1,0 +1,5 @@
+---
+- hosts: hypervisor
+  name: Create VM
+  roles:
+    - vmadm

@@ -1,0 +1,5 @@
+---
+- hosts: hypervisor
+  name: Import image
+  roles:
+    - imgadm

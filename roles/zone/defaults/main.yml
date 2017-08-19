@@ -1,0 +1,4 @@
+---
+libffi_tgz: libffi-3.2.1nb1.tgz
+db4_tgz: db4-4.8.30.tgz
+python_tgz: python27-2.7.12.tgz

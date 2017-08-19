@@ -1,0 +1,6 @@
+---
+- hosts: zone
+  gather_facts: false
+  name: Bootstrap with Python27
+  roles:
+    - zone
